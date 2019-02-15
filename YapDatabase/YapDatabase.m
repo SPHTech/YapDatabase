@@ -664,6 +664,11 @@ static int connectionBusyHandler(void *ptr, int count) {
 		[[NSNotificationCenter defaultCenter] postNotification:notification];
 	});
 }
+    
+-(void)deregisterDatabaseForPath : (NSString *)path{
+    [YapDatabaseManager deregisterDatabaseForPath:path];
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark Setup
