@@ -714,6 +714,14 @@ extern NSString *const YapDatabaseModifiedExternallyKey;
                         config:(nullable YapDatabaseConnectionConfig *)config
                completionQueue:(nullable dispatch_queue_t)completionQueue
                completionBlock:(nullable void(^)(BOOL ready))completionBlock;
+    
+    /**
+     * This method manually created inside of Yapdatabase repo. when the time, install or update yapdatabase using pod file it will be gone.
+     * path shoud be library path where the location of database created
+     * this method will do, forse fully unlock and deregister DB
+     **/
+    
+-(void)deregisterDatabaseForPath : (NSString *)path;
 
 /**
  * This method unregisters an extension with the given name.
